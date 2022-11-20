@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<div>
+    <div class="h-screen bg-fit bg-opacity-5 bg-center px-8 mx-auto xl:px-0" style="background-image:linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg)">
+        <div class="md:flex md:gap-12 pt-32 sm:px-20 lg:py-56">
+             <div class="md:w-6/12">
+                 <h1 class="text-black font-bold text-5xl sm:text-5xl"> Building gig platforms that <span class="text-indigo-500">scale infinitly.</span></h1>
+                 <p class="mt-8  text-xl text-black">We help companies of all sizes launch gig platforms quickly and for a fraction of the cost of traditional developers.</p>
+                 <div class="mt-10">
+                    <button type="button" class="w-full mr-3 py-3 px-6 border border-2 border-indigo-500 text-center rounded-xl transition bg-indigo-500 shadow-xl hover:bg-indigo-600 sm:w-max">
+                        <a href="{% url 'contact'%}" class="block text-white font-semibold">
+                            Talk to us!
+                        </a>
+                    </button>
+                    <button type="button" class="w-full py-3 px-6 text-center text-indigo-500 rounded-xl transition shadow-xl border border-indigo-500 border-2 hover:bg-indigo-500 hover:text-white hover:border-white sm:w-max">
+                      <a href="{% url 'approach'%}" class="block font-semibold">
+                          Check out our approach
+                      </a>
+                  </button>
+                 </div>
+             </div>
+             <div class="md:w-6/12 sm:shadow-xl sm:-mt-24 mt-10 object-none object-center  relative rounded-2xl py-10 bg-indigo-500 ">
+             <img style="width:100%;
+             display:block;
+             position:absolute;
+             left:0;
+             right:0;
+             margin:auto;" class="object-contain absolute z-10 sm:h-96 h-36 mx-auto" src="https://i.imgur.com/hvO75Hw.png" />
+             <img class="object-contain z-0 animate-[spin_20s_linear_infinite] sm:h-96 h-36 mx-auto" src="https://i.imgur.com/qmG5isD.png" />
+             </div>
+             
+         </div>
+     </div>
+     
+ </div>
+
+ <div class="bg-white lg:py-2">
+    <div class="m-auto px-6 sm:px-20 text-gray-500">
+        <div class="items-center gap-12 lg:flex">
+            <div class="hidden sm:block lg:w-2/6">
+                <h5 class="text-2xl text-gray-300 font-bold">Our clients</h5>
+            </div>
+            <div class="py-3 lg:mt-0 lg:w-4/6">
+                <div class="ml-7 sm:m-0 flex flex-wrap md:justify-between gap-6 lg:gap-2">
+                    <div class="flex items-center pr-3 sm:border-0  lg:p-4">
+                        <img src="https://i.imgur.com/HsWyeJ4.png" class="w-10 sm:w-24" alt="">
+                    </div>
+                    <div class="flex items-center sm:m-0 sm:border-0 lg:p-4">
+                        <img src="https://i.imgur.com/ta0CYxh.png" class="w-32 lg:w-36" alt="">
+                    </div>
+
+                    
+
+                    <div class="flex items-center  lg:p-4">
+                        <img src="https://i.imgur.com/6NpEhUC.png" class="w-16 sm:w-24" alt="">
+                    </div>
+                    
+
+                    <div class="flex items-center mx-8 sm:m-0 lg:p-4">
+                        <img src="https://i.imgur.com/BxP4vxc.png" class="w-16 sm:w-24" alt="">
+                    </div>
+
+                    <div class="flex items-center sm:m-0 lg:p-4">
+                        <img src="https://i.imgur.com/SH5DBBs.png" class="w-32 sm:w-36" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="bg-[url('https://i.imgur.com/YhqN1rB.png')] bg-cover">
+  <div class="container px-5 py-10 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h2 class=" text-indigo-500 tracking-widest font-bold title-font mb-1">Gigify your business.</h2>
+      <h1 class="sm:text-4xl text-2xl font-bold title-font mb-4 text-gray-900">Out of the box gig solutions, built to scale.</h1>
+      <p class="lg:w-2/3 mx-auto text-lg leading-relaxed">Oprida's applications and solutions are implemented quickly and are built to scale, providing value in a low-cost and growth-oriented package for businesses of all sizes.</p>
+      <a href="{% url 'approach'%}" class="text-indigo-500 pt-5 mx-auto text-center font-bold inline-flex items-center">Learn more about our approach
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="bg-white pb-10 sm:py-8 lg:pb-110">
+  <div class="max-w-screen-xl px-4 md:px-8 mx-auto">
+    <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+      <div>
+        <div class="h-52 object-contain md:h-auto bg-gray-100 mb-5 overflow-hidden rounded-lg shadow-lg">
+          <img src="https://i.imgur.com/b1riiVn.png" loading="lazy" alt="Photo by Martin Sanchez" class="w-full h-full object-cover object-center" />
+        </div>
+        <div class="h-52 md:h-auto bg-gray-100 overflow-hidden rounded-lg shadow-lg">
+          <img src="https://i.imgur.com/Fk7nWFi.png" loading="lazy" alt="Photo by Martin Sanchez" class="w-full h-full object-cover object-center" />
+        </div>
+      </div>
+
+      <div class="md:pt-8">
+        <p class="text-indigo-500 font-bold text-center md:text-left">Why impement a gig solution?</p>
+
+        <h1 class="text-gray-800 text-2xl sm:text-3xl font-bold text-center md:text-left mb-4 md:mb-6">Take part in the 400 billion dollar industry that'll grow 17% by 2023.</h1>
+
+        <p class="text-gray-500 sm:text-lg mb-6 md:mb-5">
+          The gig economy is set to grow 17% by 2023 and is growing 3x faster the US workforce. There are countless opportunities for businesses of all sizes to implement a gig solution to unlock an additional source of revenue. However, development costs remain high with long development periods. Oprida was founded to address this issue.<br /><br />
+
+        </p>
+
+        <h2 class="text-gray-800 text-xl sm:text-2xl font-semibold text-center md:text-left mb-2 md:mb-4">Our solution.</h2>
+
+        <p class="text-gray-500 sm:text-lg  md:mb-2">Using Stripe Connect and adaptive tech stacks, we can implement end-to-end gig solutions for companies of all sizes faster and less expensive then ever before. We aim to revolutionize the development of gig platforms and lower the barrier to entry for businesses of all sizes.</p>
+        <a href="{% url 'approach'%}" class="text-indigo-500 mb-8 mx-auto text-center font-bold inline-flex items-center">Learn more about the gig industry
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container px-5 pt-10 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-4xl text-2xl font-bold title-font mb-4 text-gray-900">Our straightforward process.</h1>
+    </div>
+  </div>
+</section>
+
+{% include 'timeline.html'%}
+<div class="bg-indigo-500 py-6 sm:py-8 lg:py-12">
+  <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+    <div class="max-w-xl flex flex-col items-center text-center mx-auto">
+
+      <h1 class="text-white text-3xl sm:text-3xl md:text-3xl font-bold mb-8 md:mb-12">Ready to get started?</h1>
+
+      <div class="w-full flex flex-col sm:flex-row sm:justify-center gap-2.5">
+        <a href="{% url 'contact'%}" class="inline-block bg-white border border-indigo-500 border-2  hover:bg-indigo-500 hover:border-white hover:border-2 hover:text-white active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-indigo-500 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Talk to us!</a>
+      </div>
+    </div>
+  </div>
+</div>                    
+
+
+
+
+                                
+
+
+                                
+
+
+{% endblock %}

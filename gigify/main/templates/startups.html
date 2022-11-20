@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+<div class="px-4 pt-32 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-20 lg:px-0 lg:pt-32">
+
+    <div class="flex flex-col">
+      <div class="mb-6 lg:mb-0 lg:pr-5">
+        <p aria-label="" class="inline-flex items-center font-bold text-indigo-500">For startups.</p>
+
+        <h2 class="sm:mb-5 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl sm:leading-none">
+          Build your idea in weeks,
+          then scale without limit.
+        </h2>
+      </div>
+      <div class="">
+        <p class="text-base text-gray-700">
+          We help founders get to an MVP quickly, adapt on the go, and scale without limit.
+        </p>
+      </div>
+    </div>
+  </div>
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-10">
+        <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-900">Use Cases for Startups:</h1>
+      </div>
+      <div class="flex flex-wrap  text-center">
+        <div class="p-4 md:w-1/3 sm:w-1/3 w-full">
+          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-indigo-500 mb-3 inline-block">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>              
+            <h2 class="title-font font-bold text-xl text-gray-900">Non-tech founders</h2>
+            <p class="text-sm leading-relaxed">Not a tech guy? </br> Launch without a CTO.</p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/3 sm:w-1/3 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-indigo-500 mb-3 inline-block">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+                  </svg>
+                               
+              <h2 class="title-font font-bold text-xl text-gray-900">Pre-funded</h2>
+              <p class="text-sm leading-relaxed">Test, optimize, and scale your app</br> to ensure a great funding round.</p>
+            </div>
+          </div>
+        <div class="p-4 md:w-1/3 sm:w-1/3 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-indigo-500 mb-3 inline-block">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                  </svg>
+                               
+              <h2 class="title-font font-bold text-xl text-gray-900">Funded</h2>
+              <p class="text-sm leading-relaxed">Use our solutions to minimize</br> development costs and time.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<section>
+  <div class="container px-5 pt-10 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-4xl text-2xl font-bold title-font mb-4 text-gray-900">Our straightforward process.</h1>
+    </div>
+  </div>
+</section>
+
+{% include 'timeline.html'%}
+<div class="bg-indigo-500 py-6 sm:py-8 lg:py-12">
+  <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+    <div class="max-w-xl flex flex-col items-center text-center mx-auto">
+
+      <h1 class="text-white text-3xl sm:text-3xl md:text-3xl font-bold mb-8 md:mb-12">Ready to get started?</h1>
+
+      <div class="w-full flex flex-col sm:flex-row sm:justify-center gap-2.5">
+        <a href="{% url 'contact'%}" class="inline-block bg-white border border-indigo-500 border-2  hover:bg-indigo-500 hover:border-white hover:border-2 hover:text-white active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-indigo-500 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Talk to us!</a>
+      </div>
+    </div>
+  </div>
+</div>                    
+
+
+
+
+                                
+
+
+                                
+
+
+{% endblock %}
