@@ -1,0 +1,86 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %}{{object.title}}{% endblock %}
+{% block description %}{{ object.description }}{% endblock %}
+
+{% block content %}
+
+{% load markdownextras %}
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.css" integrity="sha512-q0UqxA0Ka1VxVBMFJoNfTVBYFWXqkNeF1N6WZPyLNULkF9YdpAuS/dqsN3/ClxBUzHJGrrkgLJFUlzFgXunXDQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+}
+
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}
+</style>
+
+
+
+<section class=" pb-10" style="background-image:linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg)">
+
+
+    <div class="pt-20 px-20">
+
+    <img class="rounded-xl w-5/12 shadow-xl border mx-auto h-full bg-black" src="{{ object.image }}" />
+
+
+    <h1 class="text-center pt-10 font-bold text-3xl">
+    {{ object.title }}
+    </h1>
+    </div>
+
+    
+
+    <div class="w-full text-center">
+        <a href="{% url 'casestudies' %}" class="text-center mx-auto text-indigo-500">
+            All Case Studies
+        </a>
+    </div>
+
+    <div class="w-full text-center pb-10">
+        <p class="text-center mx-auto text-gray-500">
+            {{ object.description }}
+        </p>
+    </div>
+
+    <article class="markdown-body bg-gray-100 rounded-2xl border px-5">
+        {{ object.textfield | markdown | safe }}
+    </article>
+
+
+
+
+                                
+
+
+</section>  
+
+<div class="bg-indigo-500 py-6 sm:py-8 lg:py-12">
+  <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+    <div class="max-w-xl flex flex-col items-center text-center mx-auto">
+
+      <h1 class="text-white text-3xl sm:text-3xl md:text-3xl font-bold mb-8 md:mb-12">Ready to get started?</h1>
+
+      <div class="w-full flex flex-col sm:flex-row sm:justify-center gap-2.5">
+        <a href="{% url 'contact'%}" class="inline-block bg-white border border-indigo-500 border-2  hover:bg-indigo-500 hover:border-white hover:border-2 hover:text-white active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-indigo-500 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Talk to us!</a>
+      </div>
+    </div>
+  </div>
+</div>      
+
+
+{% endblock %}
+
