@@ -5,7 +5,7 @@
 {% load static %}
 
 <div>
-    <div class="h-screen bg-fit bg-opacity-5 bg-center px-8 mx-auto xl:px-0" style="background-image:linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg)">
+    <div class="h-full bg-fit bg-opacity-5 bg-center px-8 mx-auto xl:px-0" style="background-image:linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg)">
         <div class="md:flex md:gap-12 pt-32 sm:px-20 lg:py-48">
              <div class="md:w-6/12">
 
@@ -218,7 +218,7 @@
 
 
       <div class="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-3">
-          {% for case in cases|slice:":1" %}
+          {% for case in cases|slice:":3" %}
           <div>
               <img class="relative z-10 object-cover w-full rounded-xl h-72" src="{{ case.image }}" alt="">
 

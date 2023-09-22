@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load tailwind_filters %}
+
+<div>
+    <div class=" bg-opacity-5 h-screen bg-center px-8 mx-auto xl:px-0 pt-52 " style="background-image:linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg)">
+        <form class="w-72 flex flex-col bg-white border rounded-2xl mx-auto px-5 shadow-lg" method="POST">
+            <h1 class="text-center text-xl font-bold py-5">Benmore Client Login</h1>
+        
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input class="flex items-center justify-center mx-auto h-12 w-full px-5 sm:w-64 bg-blue-500 mt-8 rounded font-semibold text-sm text-blue-100 hover:bg-blue-700" type="submit" value="Login"></input>
+                <div class="flex mt-6 justify-center text-xs">        
+                </div>
+            </form>
+ </div>
+
+{% endblock %}

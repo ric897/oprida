@@ -20,41 +20,49 @@ from django.core.mail import send_mail
 import stripe
 from django.template.loader import render_to_string
 from django.db.models import Q
+import lyricsgenius
+from django.http import JsonResponse
+import requests
+
+
 
 # Create your views here.
 
 
 def index(request):
     context = {}
+
+    if request.user.is_authenticated:
+        return redirect('dashboard')
+    
     context['cases'] = Case.objects.all()
 
-    if request.method == 'Post':
 
 
-        form = OpenAI(request.POST)
+    return render(request, 'index.html', context)
 
-        openai.api_key = "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"
+@login_required
+def dashboard(request):
+    context = {}
+    context['tasks'] = Task.objects.filter(user=request.user).order_by('position')[:2]
+    context['deliverables'] = Deliverable.objects.filter(user=request.user)
+    context['messages'] = Message.objects.filter(user=request.user)[:5]
+    context['invoices'] = Invoice.objects.filter(user=request.user)[:5]
+    return render(request, 'dashboard.html', context)
 
-        # Use the OpenAI API to generate some text
-        response = openai.Completion.create(
-            engine="text-davinci-002",
-            prompt="Once upon a time, in a land far, far away, there was a",
-            max_tokens=100,
-            n=1,
-            temperature=0.5,
-        )
+class CustomLoginView(LoginView):
+    template_name = 'login.html'
+    fields = '__all__'
+    redirect_authenticated_user = True
 
-        context['form'] = form
-        context['text'] = response
-
-        return render(request, 'index.html', context)
+    def get_success_url(self):
+        return reverse_lazy('dashboard')
     
-    else:
 
-        form = OpenAI
-        context['form'] = form
+def booking(request):
+    context = {}
+    return render(request, 'booking.html', context)
 
-        return render(request, 'index.html', context)
 
 def approach(request):
     context = {}

@@ -1,0 +1,142 @@
+
+
+
+
+openapi: 3.0.1
+info:
+  title: Song Info Plugin
+  description: A plugin that allows a user to see data on a song.
+  version: 'v1'
+servers:
+  - url: https://oprida.com
+paths:
+  /lyrics/:
+    get:
+      operationId: getSongData
+      summary: Get all of the data on a given song specified by the args
+      parameters:
+          - in: query
+            name: search_term
+            schema:
+                type: string
+            description: The song that is being searched. This parameter is passed as as follows /lyrics/search_term/.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getSongResponse'
+components:
+  schemas:
+    getSongResponse:
+      type: object
+      properties:
+        song:
+          type: object
+          description: The song object containing all song data
+          properties:
+            annotation_count:
+              type: integer
+              description: The count of annotations for the song
+            api_path:
+              type: string
+              description: API path to the song
+            apple_music_id:
+              type: string
+              description: ID of the song on Apple Music
+            apple_music_player_url:
+              type: string
+              description: URL of the Apple Music player for the song
+            artist_names:
+              type: string
+              description: Names of the artist(s)
+            description:
+              type: object
+              description: Description of the song
+              properties:
+                plain:
+                  type: string
+                  description: Plain text description of the song
+            embed_content:
+              type: string
+              description: Embeddable content for the song
+            featured_video:
+              type: boolean
+              description: Flag indicating if the song has a featured video
+            full_title:
+              type: string
+              description: Full title of the song
+            header_image_thumbnail_url:
+              type: string
+              description: URL to the header image thumbnail
+            header_image_url:
+              type: string
+              description: URL to the header image
+            id:
+              type: integer
+              description: ID of the song
+            language:
+              type: string
+              description: Language of the song
+            lyrics_owner_id:
+              type: integer
+              description: ID of the lyrics owner
+            lyrics_placeholder_reason:
+              type: string
+              description: Reason for lyrics placeholder
+            lyrics_state:
+              type: string
+              description: State of the lyrics (e.g., complete, incomplete)
+            path:
+              type: string
+              description: Path to the song
+            pyongs_count:
+              type: integer
+              description: Pyongs count for the song
+            recording_location:
+              type: string
+              description: Recording location of the song
+            relationships_index_url:
+              type: string
+              description: URL to the song relationships index
+            release_date:
+              type: string
+              description: Release date of the song
+            release_date_for_display:
+              type: string
+              description: Formatted release date for display
+            release_date_with_abbreviated_month_for_display:
+              type: string
+              description: Formatted release date with abbreviated month for display
+            song_art_image_thumbnail_url:
+              type: string
+              description: URL to the song art image thumbnail
+            song_art_image_url:
+              type: string
+              description: URL to the song art image
+            stats:
+              type: object
+              properties:
+                accepted_annotations:
+                  type: integer
+                contributors:
+                  type: integer
+                iq_earners:
+                  type: integer
+                transcribers:
+                  type: integer
+                unreviewed_annotations:
+                  type: integer
+                verified_annotations:
+                  type: integer
+                hot:
+                  type: boolean
+                pageviews:
+                  type: integer
+            title:
+              type: string
+            title_with_featured:
+              type: string
+            url:
+              type: string

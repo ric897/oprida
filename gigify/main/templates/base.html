@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="https://i.imgur.com/UOoT5uh.png"/>
+    <link rel="icon" type="image/png" href="https://i.imgur.com/EjLQyvm.png"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.2/src/index.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <title>{% block title %} Oprida Systems
+    <title>{% block title %} Benmore
     {% endblock %}</title>
     <meta name="description"
       content="Building gig platforms that scale infinitly.">
@@ -20,11 +20,11 @@
     <link rel="canonical" href="/">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Oprida - Building gig platforms that scale infinitly.">
+    <meta property="og:title" content="Benmore - Building gig platforms that scale infinitly.">
     <meta property="og:description"
       content="A technical solutions company that designs systems to solve your business problems!">
-    <meta property="og:url" content="https://oprida.com">
-    <meta property="og:site_name" content="Oprida Systems">
+    <meta property="og:url" content="https://benmore.tech">
+    <meta property="og:site_name" content="Benmore Systems">
     <meta property="article:modified_time" content="2021-03-31T01:32:06+00:00">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,7 +105,7 @@
                     <div class="w-full px-5 flex justify-between lg:w-max md:px-0">
                         <a href="{% url 'index'%}" aria-label="logo" class="flex items-center">
                             <div>
-                            <p class="text-4xl font-bold text-indigo-500">oprida</p>
+                            <p class="text-4xl font-bold text-indigo-500">Benmore</p>
                         </div>
                         </a>
                         <label id="nice" for="hbr" class="peer-checked:hamburger block relative z-20 p-6 -mr-6 cursor-pointer lg:hidden">
@@ -155,11 +155,17 @@
                         </div>
 
                         <div class="w-full text-white sm:pl-6 font-bold space-y-2 flex flex-colsm:flex-row lg:space-y-2 md:w-max lg:border-l">
-                            <a href="{% url 'contact'%}" type="button" title="Start buying" class="w-full py-2.5 px-3 text-center rounded-xl transition bg-indigo-500 sm:w-max">
+                          {% if request.user.is_authenticated%}
+                            <a href="{% url 'logout'%}" type="button" title="Start buying" class="w-full py-2.5 px-3 text-center rounded-xl transition bg-indigo-500 sm:w-max">
                                 <span class="block text-white font-bold lg:text-sm">
-                                    Talk to us!
+                                    Logout
                                 </a>
-                            </button>
+                          {% else %}
+                          <a href="{% url 'login'%}" type="button" title="Start buying" class="w-full py-2.5 px-3 text-center rounded-xl transition bg-indigo-500 sm:w-max">
+                            <span class="block text-white font-bold lg:text-sm">
+                                Client Login
+                            </a>
+                          {% endif %}
                         </div>
                     </div>
                 </div>
@@ -175,10 +181,10 @@
     <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
       <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
         
-        <p class="ml-3 text-xl">oprida</p>
+        <p class="ml-3 text-xl">Benmore</p>
       </a>
-      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2022 oprida —
-        <a href="" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@oprida</a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2022 benmore —
+        <a href="" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@benmore</a>
       </p>
     </div>
   </footer>
