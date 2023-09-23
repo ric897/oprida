@@ -61,6 +61,7 @@ class CustomLoginView(LoginView):
 
 def booking(request):
     context = {}
+    context['casestudies'] = Case.objects.all()
     return render(request, 'booking.html', context)
 
 
