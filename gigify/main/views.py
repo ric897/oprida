@@ -64,6 +64,12 @@ def booking(request):
     context['casestudies'] = Case.objects.all()
     return render(request, 'booking.html', context)
 
+def payment(request, amt):
+    amount = amt
+    link = requests.get(f"https://retainlysms-backend.herokuapp.com/api/stripe/afterpay/{amount}")
+    linkredirect = link.json()['sessionURL']
+    return HttpResponseRedirect(linkredirect)
+
 
 def approach(request):
     context = {}
